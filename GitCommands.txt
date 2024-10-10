@@ -1,0 +1,20 @@
+echo "# QualityStreamTutorial" >> README.md
+
+*******Subir proyecto a GitHub
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MarioAlexx/QualityStreamTutorial.git
+git push -u origin main ( git push -f -u origin main)
+
+
+*****Agregar cambios
+git add . 
+git commit -m "cambios"
+git push -u origin main
+
+*******
+Extraer cambios de un repositorio remoto
+git fetch REMOTE-NAME
+git pull REMOTE-NAME
