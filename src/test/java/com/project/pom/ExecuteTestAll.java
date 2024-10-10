@@ -7,5 +7,5 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({ RegisterTest.class, SignOnTest.class })
 public class ExecuteTestAll {
-
+	
 }
