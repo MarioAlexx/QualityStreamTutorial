@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
+				dir "QualityStreamTutorial"
                 sh "mvn clean compile test"
             }
         }
