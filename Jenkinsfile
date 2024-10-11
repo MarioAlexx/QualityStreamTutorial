@@ -1,20 +1,20 @@
 pipeline {
-    agent any
+    agent {label 'main'}
 
     stages {
-        stage('Build') {
+        stage('test') {
             steps {
-                echo 'Building..'
+                sh "mvn clean compile test"
             }
         }
-        stage('Test') {
+        stage('Build application') {
             steps {
-                echo 'Testing..'
+                echo 'mvn clean install -Dmaven.test.skip-true'
             }
         }
-        stage('Deploy') {
+        stage('Create docker image') {
             steps {
-                echo 'Deploying....'
+                echo 'creando docker'
             }
         }
     }
