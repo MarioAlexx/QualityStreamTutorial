@@ -39,6 +39,9 @@ public class Base {
 	public void click (By locator) {
 		driver.findElement(locator).click();
 }
+	public void click (WebElement webElement) {
+		webElement.click();
+	}
 
 	public Boolean isDisplayed(By locator) {
 		try {
