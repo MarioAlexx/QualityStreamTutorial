@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Base {
-	private WebDriver driver;
+	protected WebDriver driver;
 	
 	public Base(WebDriver driver) {
 		this.driver=driver;

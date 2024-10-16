@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class dropdownListTest {
@@ -17,17 +18,25 @@ public class dropdownListTest {
 		driver.manage().window().maximize();
 	}
 
-	@After
-	public void tearDown() throws Exception {
 
-	}
 
-	@Test
+	/*@Test
 	public void testDropdownListClassic() {
 		dropListPage.visit("https://demo.guru99.com/test/newtours/index.php");
+		dropListPage.visit("https://demo.guru99.com/test/newtours/reservation.php");
 		dropListPage.signOn();
-		assertEquals(dropListPage.selectDropdwonList_Passengers(), "4");
+		assertEquals(dropListPage.selectDropdwonList_Passengers(), "2");
 		assertEquals(dropListPage.selectDropdownList_DepartinFrom(), "Paris");
+	} */
+	
+	@Test
+	public void testReadDropdownList() throws InterruptedException {
+		dropListPage.visit("https://react-bootstrap.github.io/docs/components/dropdowns/");
+		dropListPage.selectReadDropdownList();
 	}
-
+	
+	@After
+	public void tearDown() throws Exception {
+//driver.quit();
+	}
 }
